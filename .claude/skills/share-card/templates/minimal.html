@@ -5,47 +5,47 @@
 <style>
   * { margin: 0; padding: 0; box-sizing: border-box; }
   body {
-    background: #0d1117;
+    background: #eff1f5;
     display: flex; align-items: center; justify-content: center;
     min-height: 100vh;
     font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Microsoft YaHei', sans-serif;
   }
+  /* Catppuccin Latte */
   #card-wrapper {
-    width: 100%; min-height: 400px;
-    background: linear-gradient(135deg, #0d1117 0%, #161b22 100%);
+    width: 100%; min-height: 300px;
+    background: #eff1f5;
     position: relative; overflow: hidden;
     display: flex; flex-direction: column;
     justify-content: center; align-items: center;
-    padding: 80px 80px;
-    color: #e6edf3;
+    padding: 64px 64px;
+    color: #4c4f69;
   }
   #card-wrapper::before {
     content: '';
-    position: absolute; top: -20%; left: 50%; width: 80%; height: 60%;
-    background: radial-gradient(ellipse, rgba(88,166,255,0.08), transparent 70%);
+    position: absolute; top: -10%; left: 50%; width: 70%; height: 50%;
+    background: radial-gradient(ellipse, rgba(30,102,245,0.06), transparent 70%);
     pointer-events: none;
   }
   .title {
-    font-size: 52px; font-weight: 700; z-index: 1;
-    text-align: center; line-height: 1.2; margin-bottom: 30px;
-    background: linear-gradient(135deg, #58a6ff, #bc8cff);
-    -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+    font-size: 42px; font-weight: 700; z-index: 1;
+    text-align: center; line-height: 1.2; margin-bottom: 24px;
+    color: #1e66f5;
   }
   .subtitle {
-    font-size: 24px; color: #8b949e; z-index: 1;
-    text-align: center; margin-bottom: 50px; line-height: 1.5;
+    font-size: 20px; color: #6c6f85; z-index: 1;
+    text-align: center; margin-bottom: 40px; line-height: 1.5;
   }
   .body {
-    font-size: 22px; color: #c9d1d9; z-index: 1;
-    text-align: center; line-height: 1.7; max-width: 800px;
+    font-size: 18px; color: #4c4f69; z-index: 1;
+    text-align: center; line-height: 1.7; max-width: 600px;
   }
   .footer {
-    position: absolute; bottom: 36px; right: 48px;
-    font-size: 14px; color: #484f58; z-index: 1;
+    position: absolute; bottom: 28px; right: 40px;
+    font-size: 13px; color: #9ca0b0; z-index: 1;
   }
   .logo {
-    position: absolute; top: 36px; left: 48px;
-    font-size: 14px; color: #484f58; z-index: 1;
+    position: absolute; top: 28px; left: 40px;
+    font-size: 13px; color: #9ca0b0; z-index: 1;
   }
 </style>
 </head>
