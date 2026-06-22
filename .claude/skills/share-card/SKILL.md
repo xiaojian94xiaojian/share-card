@@ -37,8 +37,11 @@ dependencies: node>=18, npm
 | 选项 | 标签 | 说明 |
 |------|------|------|
 | A | 自适应 | AI 量身定制 |
-| B | 简洁黑白版 | 短文、教程、总结 |
-| C | 代码风 | 代码片段 |
+| B | 简洁黑白版 | 短文、教程、总结（GitHub 风格） |
+| C | 北极蓝灰版 | 技术长文（Nord 主题） |
+| D | 暖咖版 | 人文医学（Gruvbox 主题） |
+| E | 霓虹紫版 | 创意设计（Dracula 主题） |
+| F | 森绿版 | 通用技术（Everforest 主题） |
 
 **第三问 — 什么宽度？**
 
@@ -58,17 +61,15 @@ dependencies: node>=18, npm
 
 **先分析内容类型再选模板。用户选的模板不合适时，主动指出并建议更换。**
 
-| 模板 | 风格来源 | 底色 | 基调 |
-|------|----------|------|------|
-| 简洁黑白版 `minimal` | GitHub Markdown CSS | `#ffffff` | 白底黑字，蓝链接 |
-| 代码风 `code-focus` | Catppuccin Mocha | `#1e1e2e` | 最暗，终端风 |
+| 模板 | 主题 | 底色 | h1 色 | 调性 |
+|------|------|------|-------|------|
+| `minimal` 简洁黑白版 | GitHub | `#ffffff` | `#1f2328` | 白底黑字，蓝链接 |
+| `nord` 北极蓝灰版 | Nord | `#2E3440` | `#88C0D0` | 冷静克制 |
+| `gruvbox` 暖咖版 | Gruvbox | `#282828` | `#FABD2F` | 复古温润 |
+| `dracula` 霓虹紫版 | Dracula | `#282A36` | `#BD93F9` | 高对比度 |
+| `everforest` 森绿版 | Everforest | `#2D353B` | `#A7C080` | 护眼低刺激 |
 
-| 内容特征 | 必须用 | 原因 |
-|----------|--------|------|
-| 教程、指南、步骤说明 | `minimal` | 清晰传达信息 |
-| 代码片段（≥5 行代码） | `code-focus` | 终端风和等宽字体 |
-| 短文、总结、Q&A | `minimal` | 结构简洁 |
-| 长篇分析、复杂内容 | 自适应 | 需要结构化排版 |
+所有固定模板都用 `[CONTENT]` 单占位符，Agent 把 Markdown 转 HTML 后替换即可。
 
 **如果用户的选择和内容不匹配："这篇内容是 X 类型，Y 模板不合适，建议换 Z。继续用 Y 还是换 Z？"**
 
@@ -89,8 +90,7 @@ dependencies: node>=18, npm
 
 Agent 把 Markdown 原文转成 HTML 后替换 `[CONTENT]` 即可。
 
-**code-focus：** `[FILENAME]` `[LANGUAGE]` `[LINE_COUNT]` `[CODE]` `[EXPLANATION]`
-- `[CODE]` 需 HTML 转义（`<` → `&lt;`），保留缩进
+**nord / gruvbox / dracula / everforest：** 统一 `[CONTENT]` 占位符，用法同 minimal。
 
 ---
 
