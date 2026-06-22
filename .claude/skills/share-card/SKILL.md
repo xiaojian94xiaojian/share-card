@@ -7,8 +7,7 @@ description: >
   a poster", or "这段对话生成图片分享". Two modes: fixed layout (pick a
   template) and adaptive layout (AI designs custom HTML/CSS per content).
   Fixed width + auto height. Default mobile width (750px).
-argument-hint: "[内容] [fixed|adaptive] [mobile|square|wide]"
-dependencies: node>=18, npm
+argument-hint: "[内容] [fixed|adaptive]"
 ---
 
 # Share Card
@@ -67,10 +66,10 @@ dependencies: node>=18, npm
 
 ### 工作流
 
-1. 读取 `templates/<name>.html`
+1. 读取 `${CLAUDE_SKILL_DIR}/templates/<name>.html`
 2. 替换占位符 `[SLOT_NAME]` 为实际内容（代码需 HTML 转义）
 3. 写临时文件 `$env:TEMP\share-card.html`
-4. 运行 `node .claude/skills/share-card/scripts/render.js --html $env:TEMP\share-card.html --preset mobile --output ./share-card.png`
+4. 运行 `node ${CLAUDE_SKILL_DIR}/scripts/render.js --html $env:TEMP\share-card.html --preset mobile --output ./share-card.png`
 5. 删除临时 HTML 文件
 6. 报告结果
 
@@ -101,7 +100,7 @@ Agent 把 Markdown 原文转成 HTML 后替换 `[CONTENT]` 即可。
 
 ### 自适应 HTML 设计约束
 
-**写 HTML 前必读 `references/html-design-guide.md`。** 关键要点：
+**写 HTML 前必读 `${CLAUDE_SKILL_DIR}/references/html-design-guide.md`。** 关键要点：
 
 - 避免 AI 味设计：不要奶油底+衬线大标题+赤陶点缀、不要纯黑底+荧光绿/朱红单色、不要报纸栏布局
 - 从内容本身找视觉灵感，不要套默认模板
@@ -112,53 +111,27 @@ Agent 把 Markdown 原文转成 HTML 后替换 `[CONTENT]` 即可。
 - 字体栈：`'Segoe UI', -apple-system, BlinkMacSystemFont, 'Microsoft YaHei', sans-serif`
 - 代码字体：`'Cascadia Code', 'Fira Code', 'Consolas', monospace`
 - 文字至少 16px，四周留白至少 40px
-- 可用 `references/catppuccin.md` 里的 4 套色板，也可以自己搭色——不做限制
-- 字体栈：`'Segoe UI', -apple-system, BlinkMacSystemFont, 'Microsoft YaHei', sans-serif`
-- 代码字体：`'Cascadia Code', 'Fira Code', 'Consolas', monospace`
-- 文字至少 16px，四周留白至少 40px
+- 可用 `${CLAUDE_SKILL_DIR}/references/catppuccin.md` 里的 4 套色板，也可以自己搭色——不做限制
 
 ---
 
 ## 渲染命令参考
 
 ```
-node .claude/skills/share-card/scripts/render.js \
-  --html <file> \
-  [--preset <mobile|square|wide>] \
-  [--width <px>] \
-  [--output <path>] \
-  [--clipboard] \
-  [--scale <1|2|3>]
+node ${CLAUDE_SKILL_DIR}/scripts/render.js --html <file> --preset mobile --output <path>
 ```
 
-| 参数 | 必需 | 说明 |
-|------|------|------|
-| `--html` | 是 | HTML 文件路径 |
-| `--preset` | 否 | 宽度预设：mobile(750) / square(1080) / wide(1200) |
-| `--width` | 否 | 自定义宽度，默认 750 |
-| `--output` | 否 | 输出路径，默认 `./<name>-<preset>.png` |
-| `--clipboard` | 否 | 渲染后复制到剪贴板 |
-| `--scale` | 否 | 缩放因子，默认 2 |
-
-### 宽度预设
-
-| 预设 | 宽度 | 适用 |
-|------|------|------|
-| `mobile` | 750px（默认） | 手机竖屏 / 微信 / 朋友圈 |
-| `square` | 1080px | Instagram / Twitter |
-| `wide` | 1200px | Link 卡片 / OG |
-
-**高度始终自适应。** 渲染后输出显示实际尺寸（如 `750×642`）。
+默认 750px 宽，高度自适应。可选 `--scale 2`（Retina），`--clipboard` 复制到剪贴板。
 
 ---
 
 ## 首次使用
 
 ```
-cd .claude/skills/share-card/scripts && npm install
+cd ${CLAUDE_SKILL_DIR}/scripts && npm install
 ```
 
-不需要额外安装 Chromium——自动使用系统的 Edge 浏览器。
+自动使用系统 Edge 浏览器。
 
 ## 故障排除
 
@@ -166,7 +139,4 @@ cd .claude/skills/share-card/scripts && npm install
 |------|------|
 | 找不到浏览器 | 确认 Edge 已安装 |
 | 中文乱码 | `<meta charset="UTF-8">`，字体栈含 `'Microsoft YaHei'` |
-| 内容被裁切 | `#card-wrapper` 不能设固定 height |
 | 渲染慢 | 首次 2-3 秒，后续 1-2 秒 |
-| 图片模糊 | `--scale` 默认 2，可加到 3 |
-| npm install 失败 | Node >= 18，用 PowerShell 执行 |
