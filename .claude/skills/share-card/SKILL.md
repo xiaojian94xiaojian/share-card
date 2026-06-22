@@ -93,40 +93,27 @@ Agent 把 Markdown 原文转成 HTML 后替换 `[CONTENT]` 即可。
 ### 工作流
 
 1. 分析内容：主题、语调、结构
-2. 选  Catppuccin flavor 和强调色（见下表，色值查 `references/catppuccin.md`）
-3. 编写完整 HTML（CSS 内联，根容器 `#card-wrapper`，色值用 Catppuccin）
+2. 构思视觉方向：色彩、字体、布局——自由发挥，参考 `references/catppuccin.md` 或自己搭色
+3. 编写完整 HTML（CSS 内联，根容器 `#card-wrapper`）
 4. 调用 render.js 渲染
 5. 删除临时 HTML 文件
 6. 检查输出，必要时调整
-
-### 内容→风格映射（强制）
-
-**色值来源：`references/catppuccin.md`。不要自己编颜色。**
-
-| 内容类型 | 视觉方向 | Catppuccin Flavor | 推荐强调色 | 布局 |
-|----------|----------|-------------------|-----------|------|
-| 教程/指南/文档 | 文档风 | Latte | Blue | 标题→要点→总结 |
-| 技术分析/深度文章 | 杂志风 | Macchiato | Teal | 标题→导语→正文 |
-| 代码/技术方案 | 终端风 | Mocha | Green | 窗口栏→代码→说明 |
-| 思考链/推理过程 | 时间线/步骤条 | Macchiato | Peach | 步骤编号 |
-
-色值用法：`Base` 做卡片底色，`Text` 做文字色，`Subtext0` 做次要文字，`Surface0` 做区块底色，`Overlay0` 做分割线。
-
-**额外约束：**
-- 教程/指南禁止用大字报风格
-- 代码卡片必须用等宽字体
-- 不随意套暗色渐变，要匹配内容气质
 
 ### 自适应 HTML 设计约束
 
 **写 HTML 前必读 `references/html-design-guide.md`。** 关键要点：
 
-- 避免 AI 味设计：不要奶油底+衬线大标题+赤陶点缀、不要纯黑底+荧光绿/朱红单色、不要报纸栏布局——除非内容明确需要
+- 避免 AI 味设计：不要奶油底+衬线大标题+赤陶点缀、不要纯黑底+荧光绿/朱红单色、不要报纸栏布局
 - 从内容本身找视觉灵感，不要套默认模板
 - 一次只在一个地方大胆，其他地方克制
 - CSS 全部内联在 `<style>` 中
 - 根容器 `<div id="card-wrapper">`，设 `width: 100%`，**不设固定 height**
-- 主题由内容决定：教程/文档用浅色（Latte），技术/代码用暗色（Macchiato/Mocha），对话用中暗（Frappé）
+- 内容元素 `position: relative` + `z-index: 1`
+- 字体栈：`'Segoe UI', -apple-system, BlinkMacSystemFont, 'Microsoft YaHei', sans-serif`
+- 代码字体：`'Cascadia Code', 'Fira Code', 'Consolas', monospace`
+- 文字至少 16px，四周留白至少 40px
+- 右下角 "Claude Share" 水印
+- 可用 `references/catppuccin.md` 里的 4 套色板，也可以自己搭色——不做限制
 - 字体栈：`'Segoe UI', -apple-system, BlinkMacSystemFont, 'Microsoft YaHei', sans-serif`
 - 代码字体：`'Cascadia Code', 'Fira Code', 'Consolas', monospace`
 - 文字至少 16px，四周留白至少 40px
