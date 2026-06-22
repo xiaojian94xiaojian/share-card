@@ -37,7 +37,7 @@ dependencies: node>=18, npm
 | 选项 | 标签 | 说明 |
 |------|------|------|
 | A | 自适应 | AI 量身定制 |
-| B | 简洁风 | 短文、教程、总结 |
+| B | 简洁黑白版 | 短文、教程、总结 |
 | C | 代码风 | 代码片段 |
 
 **第三问 — 什么宽度？**
@@ -60,7 +60,7 @@ dependencies: node>=18, npm
 
 | 模板 | 风格来源 | 底色 | 基调 |
 |------|----------|------|------|
-| 简洁风 `minimal` | GitHub Markdown CSS | `#ffffff` | 白底，黑字，蓝链接 |
+| 简洁黑白版 `minimal` | GitHub Markdown CSS | `#ffffff` | 白底黑字，蓝链接 |
 | 代码风 `code-focus` | Catppuccin Mocha | `#1e1e2e` | 最暗，终端风 |
 
 | 内容特征 | 必须用 | 原因 |
