@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    background: #0d1117;
+    display: flex; align-items: center; justify-content: center;
+    min-height: 100vh;
+    font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Microsoft YaHei', sans-serif;
+  }
+  #card-wrapper {
+    width: 100%; min-height: 500px;
+    background: #0d1117;
+    position: relative; overflow: hidden;
+    display: flex; flex-direction: column;
+    justify-content: center;
+    padding: 70px 70px;
+    color: #e6edf3;
+  }
+  #card-wrapper::before {
+    content: '';
+    position: absolute; top: -30%; right: -20%; width: 70%; height: 80%;
+    background: radial-gradient(ellipse, rgba(188,140,255,0.12), transparent 70%);
+    pointer-events: none;
+  }
+  #card-wrapper::after {
+    content: '';
+    position: absolute; bottom: -20%; left: -10%; width: 60%; height: 70%;
+    background: radial-gradient(ellipse, rgba(88,166,255,0.08), transparent 70%);
+    pointer-events: none;
+  }
+  .headline {
+    font-size: 64px; font-weight: 800; z-index: 1;
+    line-height: 1.15; margin-bottom: 30px;
+    background: linear-gradient(135deg, #e6edf3 0%, #58a6ff 50%, #bc8cff 100%);
+    -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+  }
+  .quote-mark {
+    font-size: 120px; line-height: 1;
+    background: linear-gradient(135deg, #58a6ff, #bc8cff);
+    -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+    z-index: 1;
+  }
+  .quote {
+    font-size: 28px; color: #c9d1d9; z-index: 1;
+    line-height: 1.6; max-width: 800px;
+    font-style: italic; margin-bottom: 40px;
+  }
+  .attribution {
+    z-index: 1; display: flex; align-items: center; gap: 16px;
+  }
+  .author {
+    font-size: 22px; font-weight: 600; color: #e6edf3;
+  }
+  .context {
+    font-size: 16px; color: #8b949e;
+  }
+  .watermark {
+    position: absolute; bottom: 36px; right: 48px;
+    font-size: 14px; color: #484f58; z-index: 1;
+  }
+</style>
+</head>
+<body>
+  <div id="card-wrapper">
+    <div class="headline">[HEADLINE]</div>
+    <div class="quote-mark">"</div>
+    <div class="quote">[QUOTE]</div>
+    <div class="attribution">
+      <span class="author">[AUTHOR]</span>
+      <span class="context">[CONTEXT]</span>
+    </div>
+    <div class="watermark">Claude Share</div>
+  </div>
+</body>
+</html>

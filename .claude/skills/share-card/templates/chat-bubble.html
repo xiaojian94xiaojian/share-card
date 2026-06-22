@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    background: #0d1117;
+    display: flex; align-items: center; justify-content: center;
+    min-height: 100vh;
+    font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Microsoft YaHei', sans-serif;
+  }
+  #card-wrapper {
+    width: 100%; min-height: 500px;
+    background: linear-gradient(160deg, #0d1117 0%, #161b22 60%, #0d1117 100%);
+    position: relative; overflow: hidden;
+    display: flex; flex-direction: column;
+    padding: 50px 60px;
+    color: #e6edf3;
+  }
+  #card-wrapper::before {
+    content: '';
+    position: absolute; top: 0; left: 0; right: 0; bottom: 0;
+    background:
+      radial-gradient(ellipse at 20% 20%, rgba(88,166,255,0.06), transparent 50%),
+      radial-gradient(ellipse at 80% 80%, rgba(188,140,255,0.06), transparent 50%);
+    pointer-events: none;
+  }
+  .header {
+    z-index: 1; margin-bottom: 40px;
+  }
+  .title {
+    font-size: 36px; font-weight: 700;
+    background: linear-gradient(135deg, #58a6ff, #bc8cff);
+    -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+  }
+  .timestamp {
+    font-size: 16px; color: #484f58; margin-top: 6px;
+  }
+  .messages {
+    z-index: 1; display: flex; flex-direction: column;
+    gap: 20px;
+  }
+  .msg { display: flex; flex-direction: column; max-width: 80%; }
+  .msg.user { align-self: flex-end; }
+  .msg.assistant { align-self: flex-start; }
+  .msg-label {
+    font-size: 13px; font-weight: 600; margin-bottom: 6px;
+    text-transform: uppercase; letter-spacing: 1px;
+  }
+  .msg.user .msg-label { color: #58a6ff; text-align: right; }
+  .msg.assistant .msg-label { color: #7ee787; }
+  .msg-bubble {
+    padding: 20px 28px; border-radius: 20px;
+    font-size: 20px; line-height: 1.6;
+  }
+  .msg.user .msg-bubble {
+    background: linear-gradient(135deg, #1f6feb44, #1f6feb22);
+    border: 1px solid #1f6feb44;
+    border-bottom-right-radius: 6px;
+  }
+  .msg.assistant .msg-bubble {
+    background: linear-gradient(135deg, #23863622, #23863611);
+    border: 1px solid #23863644;
+    border-bottom-left-radius: 6px;
+  }
+  .footer {
+    position: absolute; bottom: 30px; right: 50px;
+    font-size: 14px; color: #484f58; z-index: 1;
+  }
+</style>
+</head>
+<body>
+  <div id="card-wrapper">
+    <div class="header">
+      <div class="title">[TITLE]</div>
+      <div class="timestamp">[TIMESTAMP]</div>
+    </div>
+    <div class="messages">
+      [MESSAGES]
+    </div>
+    <div class="footer">Claude Share</div>
+  </div>
+</body>
+</html>

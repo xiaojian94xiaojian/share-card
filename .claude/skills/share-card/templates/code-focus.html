@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    background: #0d1117;
+    display: flex; align-items: center; justify-content: center;
+    min-height: 100vh;
+    font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Microsoft YaHei', sans-serif;
+  }
+  #card-wrapper {
+    width: 100%; min-height: 500px;
+    background: linear-gradient(160deg, #0d1117 0%, #0d1117 50%, #161b22 100%);
+    position: relative; overflow: hidden;
+    display: flex; flex-direction: column;
+    padding: 50px 55px;
+    color: #e6edf3;
+  }
+  #card-wrapper::before {
+    content: '';
+    position: absolute; top: 0; left: 0; right: 0; bottom: 0;
+    background: radial-gradient(ellipse at 30% 0%, rgba(88,166,255,0.06), transparent 60%);
+    pointer-events: none;
+  }
+  .title-bar {
+    z-index: 1; display: flex; align-items: center; gap: 12px; margin-bottom: 30px;
+  }
+  .dot { width: 12px; height: 12px; border-radius: 50%; }
+  .dot.red    { background: #ff5f56; }
+  .dot.yellow { background: #ffbd2e; }
+  .dot.green  { background: #27c93f; }
+  .filename {
+    font-size: 18px; color: #8b949e; font-family: 'Cascadia Code', 'Fira Code', 'Consolas', monospace;
+  }
+  .code-area {
+    z-index: 1;
+    background: #0d1117; border: 1px solid #30363d;
+    border-radius: 12px; overflow: hidden;
+    display: flex; flex-direction: column;
+    min-height: 240px; margin-bottom: 30px;
+  }
+  .code-header {
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 12px 20px; background: #161b22;
+    border-bottom: 1px solid #30363d;
+  }
+  .lang-label {
+    font-size: 14px; color: #58a6ff; font-weight: 600;
+    text-transform: uppercase; letter-spacing: 1px;
+  }
+  .line-count {
+    font-size: 13px; color: #484f58;
+  }
+  .code-body {
+    flex: 1; padding: 20px; overflow: hidden;
+    font-family: 'Cascadia Code', 'Fira Code', 'Consolas', monospace;
+    font-size: 19px; line-height: 1.7;
+    white-space: pre-wrap; word-break: break-word;
+    color: #c9d1d9;
+  }
+  .explanation {
+    z-index: 1; font-size: 20px; color: #8b949e;
+    line-height: 1.6; text-align: center;
+  }
+  .footer {
+    position: absolute; bottom: 24px; right: 40px;
+    font-size: 14px; color: #484f58; z-index: 1;
+  }
+</style>
+</head>
+<body>
+  <div id="card-wrapper">
+    <div class="title-bar">
+      <span class="dot red"></span>
+      <span class="dot yellow"></span>
+      <span class="dot green"></span>
+      <span class="filename">[FILENAME]</span>
+    </div>
+    <div class="code-area">
+      <div class="code-header">
+        <span class="lang-label">[LANGUAGE]</span>
+        <span class="line-count">[LINE_COUNT]</span>
+      </div>
+      <div class="code-body">[CODE]</div>
+    </div>
+    <div class="explanation">[EXPLANATION]</div>
+    <div class="footer">Claude Share</div>
+  </div>
+</body>
+</html>

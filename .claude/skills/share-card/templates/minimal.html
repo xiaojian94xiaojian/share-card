@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    background: #0d1117;
+    display: flex; align-items: center; justify-content: center;
+    min-height: 100vh;
+    font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Microsoft YaHei', sans-serif;
+  }
+  #card-wrapper {
+    width: 100%; min-height: 400px;
+    background: linear-gradient(135deg, #0d1117 0%, #161b22 100%);
+    position: relative; overflow: hidden;
+    display: flex; flex-direction: column;
+    justify-content: center; align-items: center;
+    padding: 80px 80px;
+    color: #e6edf3;
+  }
+  #card-wrapper::before {
+    content: '';
+    position: absolute; top: -20%; left: 50%; width: 80%; height: 60%;
+    background: radial-gradient(ellipse, rgba(88,166,255,0.08), transparent 70%);
+    pointer-events: none;
+  }
+  .title {
+    font-size: 52px; font-weight: 700; z-index: 1;
+    text-align: center; line-height: 1.2; margin-bottom: 30px;
+    background: linear-gradient(135deg, #58a6ff, #bc8cff);
+    -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+  }
+  .subtitle {
+    font-size: 24px; color: #8b949e; z-index: 1;
+    text-align: center; margin-bottom: 50px; line-height: 1.5;
+  }
+  .body {
+    font-size: 22px; color: #c9d1d9; z-index: 1;
+    text-align: center; line-height: 1.7; max-width: 800px;
+  }
+  .footer {
+    position: absolute; bottom: 36px; right: 48px;
+    font-size: 14px; color: #484f58; z-index: 1;
+  }
+  .logo {
+    position: absolute; top: 36px; left: 48px;
+    font-size: 14px; color: #484f58; z-index: 1;
+  }
+</style>
+</head>
+<body>
+  <div id="card-wrapper">
+    <div class="logo">Claude Share</div>
+    <div class="title">[TITLE]</div>
+    <div class="subtitle">[SUBTITLE]</div>
+    <div class="body">[BODY]</div>
+    <div class="footer">[FOOTER]</div>
+  </div>
+</body>
+</html>
