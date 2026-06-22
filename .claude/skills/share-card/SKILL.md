@@ -83,7 +83,27 @@ dependencies: node>=18, npm
 
 ### 各模板占位符
 
-**minimal：** `[TITLE]` `[SUBTITLE]` `[BODY]` `[FOOTER]`
+**minimal：** `[CONTENT]` 一个占位符，替换为 Markdown 转 HTML 后的完整内容。模板已内置 Markdown 元素的 Catppuccin Latte 配色：
+
+| 元素 | 颜色 | 色值 |
+|------|------|------|
+| h1 | Blue | `#1e66f5` |
+| h2 | Mauve | `#8839ef` |
+| h3 | Peach | `#fe640b` |
+| h4 | Teal | `#179299` |
+| 正文 | Text | `#4c4f69` |
+| **加粗** | Blue | `#1e66f5` |
+| *斜体* | Peach | `#fe640b` |
+| `行内代码` | Red | `#d20f39` |
+| 代码块 | Green | `#40a02b` |
+| 引用 | Mauve 左边框 | `#8839ef` |
+| 链接 | Blue | `#1e66f5` |
+| 表格表头 | Crust 底 | `#dce0e8` |
+| 分割线 | Surface0 | `#ccd0da` |
+| 无序列表标记 | Blue | `#1e66f5` |
+| 有序列表标记 | Peach | `#fe640b` |
+
+Agent 把 Markdown 原文转成 HTML 标签后替换 `[CONTENT]` 即可，不需要额外 CSS。
 
 **code-focus：** `[FILENAME]` `[LANGUAGE]` `[LINE_COUNT]` `[CODE]` `[EXPLANATION]`
 - `[CODE]` 需 HTML 转义（`<` → `&lt;`），保留缩进
