@@ -137,7 +137,12 @@ dependencies: node>=18, npm
 
 ### 自适应 HTML 设计约束
 
-- CSS 内联在 `<style>` 中
+**写 HTML 前必读 `references/html-design-guide.md`。** 关键要点：
+
+- 避免 AI 味设计：不要奶油底+衬线大标题+赤陶点缀、不要纯黑底+荧光绿/朱红单色、不要报纸栏布局——除非内容明确需要
+- 从内容本身找视觉灵感，不要套默认模板
+- 一次只在一个地方大胆，其他地方克制
+- CSS 全部内联在 `<style>` 中
 - 根容器 `<div id="card-wrapper">`，设 `width: 100%`，**不设固定 height**
 - 暗色主题首选（`#0d1117` 系背景）
 - 字体栈：`'Segoe UI', -apple-system, BlinkMacSystemFont, 'Microsoft YaHei', sans-serif`
