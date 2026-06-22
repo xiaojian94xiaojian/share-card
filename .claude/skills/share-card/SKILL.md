@@ -58,10 +58,10 @@ dependencies: node>=18, npm
 
 **先分析内容类型再选模板。用户选的模板不合适时，主动指出并建议更换。**
 
-| 模板 | Catppuccin Flavor | 底色 | 基调 |
-|------|-------------------|------|------|
-| 简洁风 `minimal` | Latte | `#eff1f5` | 暖浅，干净 |
-| 代码风 `code-focus` | Mocha | `#1e1e2e` | 最暗，终端风 |
+| 模板 | 风格来源 | 底色 | 基调 |
+|------|----------|------|------|
+| 简洁风 `minimal` | GitHub Markdown CSS | `#ffffff` | 白底，黑字，蓝链接 |
+| 代码风 `code-focus` | Catppuccin Mocha | `#1e1e2e` | 最暗，终端风 |
 
 | 内容特征 | 必须用 | 原因 |
 |----------|--------|------|
@@ -83,27 +83,11 @@ dependencies: node>=18, npm
 
 ### 各模板占位符
 
-**minimal：** `[CONTENT]` 一个占位符，替换为 Markdown 转 HTML 后的完整内容。模板已内置 Markdown 元素的 Catppuccin Latte 配色：
+**minimal：** `[CONTENT]` 一个占位符，替换为 Markdown 转 HTML 后的完整内容。
 
-| 元素 | 颜色 | 色值 |
-|------|------|------|
-| h1 | Blue | `#1e66f5` |
-| h2 | Mauve | `#8839ef` |
-| h3 | Peach | `#fe640b` |
-| h4 | Teal | `#179299` |
-| 正文 | Text | `#4c4f69` |
-| **加粗** | Blue | `#1e66f5` |
-| *斜体* | Peach | `#fe640b` |
-| `行内代码` | Red | `#d20f39` |
-| 代码块 | Green | `#40a02b` |
-| 引用 | Mauve 左边框 | `#8839ef` |
-| 链接 | Blue | `#1e66f5` |
-| 表格表头 | Crust 底 | `#dce0e8` |
-| 分割线 | Surface0 | `#ccd0da` |
-| 无序列表标记 | Blue | `#1e66f5` |
-| 有序列表标记 | Peach | `#fe640b` |
+配色采用 GitHub Markdown 风格：白底黑字、`#1f2328` 标题、`#0969da` 链接、`#656d76` 引用、`#f6f8fa` 代码底、`#d0d7de` 表格线。支持 GitHub 风格的 alert callout（`.markdown-alert-note` 等五个等级）。
 
-Agent 把 Markdown 原文转成 HTML 标签后替换 `[CONTENT]` 即可，不需要额外 CSS。
+Agent 把 Markdown 原文转成 HTML 后替换 `[CONTENT]` 即可。
 
 **code-focus：** `[FILENAME]` `[LANGUAGE]` `[LINE_COUNT]` `[CODE]` `[EXPLANATION]`
 - `[CODE]` 需 HTML 转义（`<` → `&lt;`），保留缩进
