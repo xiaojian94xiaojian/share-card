@@ -37,10 +37,8 @@ dependencies: node>=18, npm
 | 选项 | 标签 | 说明 |
 |------|------|------|
 | A | 自适应 | AI 量身定制 |
-| B | 简洁风 | 短 Q&A、小技巧 |
-| C | 对话风 | 多轮对话 |
-| D | 海报风 | 金句、结论 |
-| E | 代码风 | 代码片段 |
+| B | 简洁风 | 短文、教程、总结 |
+| C | 代码风 | 代码片段 |
 
 **第三问 — 什么宽度？**
 
@@ -63,18 +61,14 @@ dependencies: node>=18, npm
 | 模板 | Catppuccin Flavor | 底色 | 基调 |
 |------|-------------------|------|------|
 | 简洁风 `minimal` | Latte | `#eff1f5` | 暖浅，干净 |
-| 对话风 `chat-bubble` | Frappé | `#303446` | 中暗，区分度好 |
-| 海报风 `poster` | Mocha | `#1e1e2e` | 最暗，冲击力 |
 | 代码风 `code-focus` | Mocha | `#1e1e2e` | 最暗，终端风 |
 
-| 内容特征 | 必须用 | 禁止用 | 原因 |
-|----------|--------|--------|------|
-| 教程、指南、步骤说明 | `minimal` | poster | 教程要清晰传达信息，不是喊口号 |
-| 多轮对话（≥3 个来回） | `chat-bubble` | minimal | 对话结构需要气泡区分说话人 |
-| 金句、名言、结论性断语 | `poster` | code-focus | 大字报适合短有力的表达 |
-| 代码片段（≥5 行代码） | `code-focus` | poster | 代码需要终端风和等宽字体 |
-| 简短 Q&A、摘要、小技巧 | `minimal` | chat-bubble | 单条内容不需要对话结构 |
-| 技术方案、架构说明 | 自适应 | poster | 技术内容需要结构化的排版 |
+| 内容特征 | 必须用 | 原因 |
+|----------|--------|------|
+| 教程、指南、步骤说明 | `minimal` | 清晰传达信息 |
+| 代码片段（≥5 行代码） | `code-focus` | 终端风和等宽字体 |
+| 短文、总结、Q&A | `minimal` | 结构简洁 |
+| 长篇分析、复杂内容 | 自适应 | 需要结构化排版 |
 
 **如果用户的选择和内容不匹配："这篇内容是 X 类型，Y 模板不合适，建议换 Z。继续用 Y 还是换 Z？"**
 
@@ -90,21 +84,6 @@ dependencies: node>=18, npm
 ### 各模板占位符
 
 **minimal：** `[TITLE]` `[SUBTITLE]` `[BODY]` `[FOOTER]`
-
-**chat-bubble：** `[TITLE]` `[TIMESTAMP]` `[MESSAGES]`
-- `[MESSAGES]` 替换为完整气泡 HTML：
-  ```html
-  <div class="msg user">
-    <div class="msg-label">You</div>
-    <div class="msg-bubble">用户消息内容</div>
-  </div>
-  <div class="msg assistant">
-    <div class="msg-label">Claude</div>
-    <div class="msg-bubble">Agent 回复内容</div>
-  </div>
-  ```
-
-**poster：** `[HEADLINE]` `[QUOTE]` `[AUTHOR]` `[CONTEXT]`
 
 **code-focus：** `[FILENAME]` `[LANGUAGE]` `[LINE_COUNT]` `[CODE]` `[EXPLANATION]`
 - `[CODE]` 需 HTML 转义（`<` → `&lt;`），保留缩进
@@ -133,8 +112,6 @@ dependencies: node>=18, npm
 | 教程/指南/文档 | 文档风 | Latte | Blue | 标题→要点→总结 |
 | 技术分析/深度文章 | 杂志风 | Macchiato | Teal | 标题→导语→正文 |
 | 代码/技术方案 | 终端风 | Mocha | Green | 窗口栏→代码→说明 |
-| 对话/讨论 | 气泡风 | Frappé | Mauve + Green | 消息列表 |
-| 金句/结论 | 大字报 | Mocha | Peach | 居中，一句占满 |
 | 思考链/推理过程 | 时间线/步骤条 | Macchiato | Peach | 步骤编号 |
 
 色值用法：`Base` 做卡片底色，`Text` 做文字色，`Subtext0` 做次要文字，`Surface0` 做区块底色，`Overlay0` 做分割线。
