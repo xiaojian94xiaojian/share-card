@@ -84,7 +84,8 @@ dependencies: node>=18, npm
 2. 替换占位符 `[SLOT_NAME]` 为实际内容（代码需 HTML 转义）
 3. 写临时文件 `$env:TEMP\share-card.html`
 4. 运行 `node .claude/skills/share-card/scripts/render.js --html $env:TEMP\share-card.html --preset mobile --output ./share-card.png`
-5. 报告结果
+5. 删除临时 HTML 文件
+6. 报告结果
 
 ### 各模板占位符
 
@@ -120,7 +121,8 @@ dependencies: node>=18, npm
 2. 选  Catppuccin flavor 和强调色（见下表，色值查 `references/catppuccin.md`）
 3. 编写完整 HTML（CSS 内联，根容器 `#card-wrapper`，色值用 Catppuccin）
 4. 调用 render.js 渲染
-5. 检查输出，必要时调整
+5. 删除临时 HTML 文件
+6. 检查输出，必要时调整
 
 ### 内容→风格映射（强制）
 
