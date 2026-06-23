@@ -3,7 +3,7 @@
 
 <p align="center">
   <strong>简体中文</strong>
-  &nbsp;·&nbsp;
+   · 
   <a href="README-en.md">English</a>
 </p>
 
@@ -20,13 +20,23 @@
 
 ## 快速开始
 
-```bash
-# 1. 克隆到目标项目的 skills 目录
-git clone https://github.com/YOU/share-card.git .claude/skills/share-card
+#### 1. 克隆到目标项目的 skills 目录
 
-# 2. 安装依赖（仅 puppeteer-core，不含 Chromium）
+```bash
+git clone https://github.com/YOU/share-card.git .claude/skills/share-card
+```
+
+#### 2. 安装依赖（仅 puppeteer-core，不含 Chromium）
+
+```bash
 cd .claude/skills/share-card/scripts
 npm install
+```
+
+#### 如果嫌安装麻烦的话，复制下面文字给你的Agent，他会帮你搞定
+
+```bash
+帮我安装这个skill：https://github.com/YOU/share-card
 ```
 
 然后在 Claude Code 对话中说：**「分享」「生成图片」「做成卡片」**

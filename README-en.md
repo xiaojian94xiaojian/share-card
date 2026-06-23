@@ -3,7 +3,7 @@
 
 <p align="center">
   <a href="README.md">简体中文</a>
-  &nbsp;·&nbsp;
+   · 
   <strong>English</strong>
 </p>
 
@@ -20,13 +20,23 @@
 
 ## Quick Start
 
-```bash
-# 1. Clone into your project's skills directory
-git clone https://github.com/YOU/share-card.git .claude/skills/share-card
+#### 1. Clone into your project's skills directory
 
-# 2. Install the single dependency (puppeteer-core, no bundled Chromium)
+```bash
+git clone https://github.com/YOU/share-card.git .claude/skills/share-card
+```
+
+#### 2. Install the single dependency (puppeteer-core, no bundled Chromium)
+
+```bash
 cd .claude/skills/share-card/scripts
 npm install
+```
+
+#### Too lazy? Copy this to your agent and it'll do everything for you
+
+```bash
+Install this skill for me: https://github.com/YOU/share-card
 ```
 
 Then in Claude Code, say: **"share", "export", "make a card"**
