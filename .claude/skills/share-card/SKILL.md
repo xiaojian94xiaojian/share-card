@@ -79,13 +79,7 @@ argument-hint: "[内容] [fixed|adaptive]"
 
 ### 各模板占位符
 
-**minimal：** `[CONTENT]` 一个占位符，替换为 Markdown 转 HTML 后的完整内容。
-
-配色采用 GitHub Markdown 风格：白底黑字、`#1f2328` 标题、`#0969da` 链接、`#656d76` 引用、`#f6f8fa` 代码底、`#d0d7de` 表格线。支持 GitHub 风格的 alert callout（`.markdown-alert-note` 等五个等级）。
-
-Agent 把 Markdown 原文转成 HTML 后替换 `[CONTENT]` 即可。
-
-**nord / gruvbox / dracula / everforest：** 统一 `[CONTENT]` 占位符，用法同 minimal。
+所有模板统一 `[CONTENT]` 占位符。Agent 把 Markdown 原文转成 HTML 后替换 `[CONTENT]` 即可。
 
 ---
 

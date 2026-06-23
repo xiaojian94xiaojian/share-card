@@ -19,9 +19,9 @@ This is a Claude Code skill (`share-card`) that converts conversation content in
 | `SKILL.md` | Skill definition — YAML frontmatter + Agent instructions. Loaded by Claude Code when skill triggers. |
 | `scripts/render.js` | HTML → PNG renderer. ES module, accepts `--html`, `--preset`/`--width`, `--output`, `--clipboard`, `--scale`. |
 | `scripts/package.json` | Single dependency: `puppeteer-core` (no bundled Chromium — uses system Edge). |
-| `templates/*.html` | 4 fixed-layout templates. Each is self-contained with inline CSS. Slots are `[UPPERCASE]` markers that the Agent replaces. |
+| `templates/*.html` | 7 fixed-layout templates. Each is self-contained with inline CSS. Single `[CONTENT]` placeholder. |
 | `references/catppuccin.md` | 4-flavor color palette used by adaptive mode. |
-| `references/design-guidelines.md` | Color, typography, spacing standards for adaptive HTML generation. |
+| `references/html-design-guide.md` | Frontend design guidance for adaptive HTML generation. |
 
 ## Commands
 
@@ -32,7 +32,6 @@ npm install
 # Render a card
 node scripts/render.js --html <file> --preset mobile --output ./card.png
 
-# Presets: mobile (750px), square (1080px), wide (1200px)
 # Height is always auto — determined by #card-wrapper content.
 # Add --clipboard to copy to clipboard (needs optional `npm i clipboard-sys`).
 ```
