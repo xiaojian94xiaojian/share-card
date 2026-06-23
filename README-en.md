@@ -7,6 +7,8 @@
 
 ---
 
+[简体中文](README.md) | English
+
 ## What is this
 
 **Share Card** is a [Claude Code](https://claude.ai/code) skill. Say "share" in a conversation and the agent will typeset the response into a polished card, then render it as a PNG — ready for Twitter, LinkedIn, GitHub, or anywhere you share images.
