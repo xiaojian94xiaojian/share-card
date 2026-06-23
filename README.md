@@ -23,7 +23,7 @@
 #### 1. 克隆到目标项目的 skills 目录
 
 ```bash
-git clone https://github.com/YOU/share-card.git .claude/skills/share-card
+git clone https://github.com/xiaojian94xiaojian/share-card.git .claude/skills/share-card
 ```
 
 #### 2. 安装依赖（仅 puppeteer-core，不含 Chromium）
@@ -36,7 +36,7 @@ npm install
 #### 如果嫌安装麻烦的话，复制下面文字给你的Agent，他会帮你搞定
 
 ```bash
-帮我安装这个skill：https://github.com/YOU/share-card
+帮我安装这个skill：https://github.com/xiaojian94xiaojian/share-card
 ```
 
 然后在 Claude Code 对话中说：**「分享」「生成图片」「做成卡片」**
