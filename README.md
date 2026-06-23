@@ -20,16 +20,18 @@
 
 ## 快速开始
 
-#### 1. 克隆到目标项目的 skills 目录
+#### 1. 全局安装（推荐，所有项目可用）
 
 ```bash
-git clone https://github.com/xiaojian94xiaojian/share-card.git .claude/skills/share-card
+git clone https://github.com/xiaojian94xiaojian/share-card.git ~/.claude/skills/share-card
 ```
+
+> 也可以只装到单个项目：把 `~/.claude/skills/share-card` 换成 `.claude/skills/share-card`
 
 #### 2. 安装依赖（仅 puppeteer-core，不含 Chromium）
 
 ```bash
-cd .claude/skills/share-card/scripts
+cd ~/.claude/skills/share-card/scripts
 npm install
 ```
 

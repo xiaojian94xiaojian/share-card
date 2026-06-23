@@ -20,16 +20,18 @@
 
 ## Quick Start
 
-#### 1. Clone into your project's skills directory
+#### 1. Global install (recommended — available in all projects)
 
 ```bash
-git clone https://github.com/xiaojian94xiaojian/share-card.git .claude/skills/share-card
+git clone https://github.com/xiaojian94xiaojian/share-card.git ~/.claude/skills/share-card
 ```
+
+> For a single project only: replace `~/.claude/skills/share-card` with `.claude/skills/share-card`
 
 #### 2. Install the single dependency (puppeteer-core, no bundled Chromium)
 
 ```bash
-cd .claude/skills/share-card/scripts
+cd ~/.claude/skills/share-card/scripts
 npm install
 ```
 
