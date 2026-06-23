@@ -1,89 +1,85 @@
 # Share Card
 
-Claude Code 技能——把对话内容一键生成精美分享卡片。
+> 将 Claude Code 对话一键生成精美分享卡片
 
-> 将 Claude Code Agent 的回答、代码、对话记录，通过 HTML 排版 → 渲染为 PNG 图片，方便分享到社交平台。
+[![License](https://img.shields.io/badge/license-MIT-blue)](LICENSE)
+[![Platform](https://img.shields.io/badge/platform-Windows%20%7C%20macOS%20%7C%20Linux-brightgreen)]()
 
-## 效果速览
+---
 
-7 套配色主题，固定宽度 750px（手机竖屏），高度随内容自适应。
+## 这是什么
 
-| 森绿亮 | 玫瑰朝霞 | 简洁白 |
-|--------|----------|--------|
-| Everforest Light | Rosé Pine Dawn | GitHub |
+**Share Card** 是一个 [Claude Code](https://claude.ai/code) 技能。在对话中说「分享」，Agent 会把当前回答排版成精美卡片，渲染为 PNG 图片，方便分享到朋友圈、Twitter、GitHub 等平台。
 
-| 森绿暗 | 霓虹紫 | 暖咖 | 北极蓝灰 |
-|--------|--------|------|----------|
-| Everforest Dark | Dracula | Gruvbox | Nord |
-
-另有**自适应模式**，AI 根据内容量身定制 HTML 设计。
-
-## 安装
-
-将仓库克隆到目标项目的 `.claude/skills/` 下：
+## 快速开始
 
 ```bash
-# 在目标项目根目录
-git clone <repo-url> .claude/skills/share-card
+# 1. 克隆到目标项目的 skills 目录
+git clone https://github.com/YOU/share-card.git .claude/skills/share-card
 
-# 安装渲染依赖（仅 puppeteer-core，不含 Chromium）
+# 2. 安装依赖（仅 puppeteer-core，不含 Chromium）
 cd .claude/skills/share-card/scripts
 npm install
 ```
 
-需要系统已安装 Edge / Chrome / Chromium 任一浏览器（脚本自动查找）。
+然后在 Claude Code 对话中说：**「分享」「生成图片」「做成卡片」**
 
-## 使用
+Agent 会引导你点选内容范围和风格，一键出图。
 
-在 Claude Code 对话中，直接说：
+## 两种模式
 
-- 「分享」「生成图片」「截图」「做成卡片」
-- 「share」「export」「make a card」「generate an OG image」
+| 模式 | 说明 |
+|------|------|
+| **固定模板** | 7 套配色主题，Agent 填入 Markdown 内容直接渲染 |
+| **自适应** | AI 根据内容量身设计 HTML，每次风格不同 |
 
-Agent 会弹出选项让你点选：
+## 7 套主题
 
-1. **分享什么内容？** — 最近回复 / 代码块 / 整段对话 / 自定义
-2. **什么排版风格？** — 自适应 / 浅色主题 / 暗色主题
-3. **具体主题**（选固定模板时）— 7 套配色任选
+| 浅色 | | |
+|--------|----------|--------|
+| 🍃 森绿亮 | 🌹 玫瑰朝霞 | 简洁白 |
+| Everforest Light | Rosé Pine Dawn | GitHub |
+
+| 暗色 | | | |
+|--------|--------|------|------|
+| 🌲 森绿暗 | 🟣 霓虹紫 | ☕ 暖咖 | 🧊 北极蓝灰 |
+| Everforest Dark | Dracula | Gruvbox | Nord |
 
 ## 工作原理
 
 ```
-Markdown 内容 → HTML 模板/自适应设计 → puppeteer-core 渲染 → PNG
+Markdown 内容 → HTML 排版 → headless 浏览器截图 → PNG（750px × 自适应高度）
 ```
-
-- **固定模板**：7 套预设配色，Agent 把 Markdown 转 HTML 填入 `[CONTENT]` 占位符
-- **自适应模式**：Agent 读内容、定方向、写完整 HTML/CSS，自由配色（参考 Catppuccin 色板）
-- **渲染引擎**：调用系统 Edge/Chrome headless 截图 `#card-wrapper`，固定宽度 750px，高度自适应
 
 ## 项目结构
 
 ```
-├── SKILL.md              # 技能定义 + Agent 指令
+├── SKILL.md              # 技能定义 + Agent 行为指令
 ├── scripts/
-│   ├── render.js         # HTML → PNG 渲染器
-│   └── package.json      # puppeteer-core
-├── templates/            # 7 套固定模板
-│   ├── everforest-light.html
-│   ├── rosepine.html
-│   ├── minimal.html
-│   ├── everforest.html
-│   ├── dracula.html
-│   ├── gruvbox.html
-│   └── nord.html
-└── references/
-    ├── catppuccin.md     # Catppuccin 4 套色板参考
-    └── html-design-guide.md  # 前端设计指南
+│   └── render.js         # HTML → PNG 渲染器
+├── templates/            # 7 套固定模板（内联 CSS）
+└── references/           # 设计参考（Catppuccin 色板 + 前端设计指南）
 ```
+
+## 依赖
+
+| 依赖 | 说明 |
+|------|------|
+| Node.js ≥ 18 | 运行渲染脚本 |
+| Edge / Chrome / Chromium | 系统自带即可，脚本自动查找 |
 
 ## 跨平台
 
-| 平台 | 首选浏览器 |
-|------|-----------|
-| Windows | Edge |
-| macOS | Chrome |
-| Linux | Chromium / Chrome |
+Windows 用 Edge，macOS 用 Chrome，Linux 用 Chromium——开箱即用。
 
-## 许可
+## FAQ
+
+**为什么不内置 Chromium？** 为了轻量。puppeteer-core + 系统浏览器仅约 10 MB，puppeteer 含 Chromium 约 350 MB。
+
+**手机端能用吗？** 固定宽度 750px，适配手机竖屏。顶部 100px 留白避免前置摄像头/灵动岛遮挡。
+
+**可以复制到剪贴板吗？** `render.js --clipboard`（需额外 `npm i clipboard-sys`）。
+
+## License
 
 MIT

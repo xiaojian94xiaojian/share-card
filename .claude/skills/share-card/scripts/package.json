@@ -1,9 +1,0 @@
-{
-  "name": "share-card-renderer",
-  "private": true,
-  "type": "module",
-  "description": "HTML-to-PNG renderer for share-card skill. Uses system Edge browser.",
-  "dependencies": {
-    "puppeteer-core": "^24.0.0"
-  }
-}

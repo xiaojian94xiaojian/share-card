@@ -1,93 +1,82 @@
 # Share Card
 
-A [Claude Code](https://claude.ai/code) skill that turns conversation highlights into shareable PNG images.
+> One-click shareable card generation from Claude Code conversations
 
-> Convert Claude Code agent responses, code snippets, and chat logs into beautifully formatted cards via HTML → headless browser screenshot.
+[![License](https://img.shields.io/badge/license-MIT-blue)](LICENSE)
+[![Platform](https://img.shields.io/badge/platform-Windows%20%7C%20macOS%20%7C%20Linux-brightgreen)]()
 
-## Themes
+---
 
-7 preset themes, fixed width 750px (mobile portrait), auto height.
+## What is this
 
-| Light | | |
-|--------|----------|--------|
-| Everforest Light | Rosé Pine Dawn | GitHub |
+**Share Card** is a [Claude Code](https://claude.ai/code) skill. Say "share" in a conversation and the agent will typeset the response into a polished card, then render it as a PNG — ready for Twitter, LinkedIn, GitHub, or anywhere you share images.
 
-| Dark | | | |
-|--------|--------|------|----------|
-| Everforest Dark | Dracula | Gruvbox | Nord |
-
-Plus an **adaptive mode** where the AI designs a custom HTML layout tailored to your content.
-
-## Installation
-
-Copy the skill into your target project:
+## Quick Start
 
 ```bash
-# Clone into your project's skills directory
-git clone <repo-url> .claude/skills/share-card
+# 1. Clone into your project's skills directory
+git clone https://github.com/YOU/share-card.git .claude/skills/share-card
 
-# Install the single rendering dependency (no bundled Chromium)
+# 2. Install the single dependency (puppeteer-core, no bundled Chromium)
 cd .claude/skills/share-card/scripts
 npm install
 ```
 
-Requires Edge, Chrome, or Chromium installed on your system (auto-detected).
+Then in Claude Code, say: **"share", "export", "make a card"**
 
-## Usage
+The agent will prompt you through content selection and theme picker — point-and-click, no typing.
 
-In Claude Code, just say:
+## Two Modes
 
-- "share", "export", "screenshot", "make a card"
-- "generate an OG image", "turn this into a post"
+| Mode | Description |
+|------|-------------|
+| **Fixed Template** | 7 preset themes. Agent fills in Markdown content, renders immediately |
+| **Adaptive** | AI designs a custom HTML layout from scratch — a different style every time |
 
-The agent will prompt you with clickable options:
+## 7 Themes
 
-1. **What to share?** — latest reply / code block / full conversation / custom
-2. **Layout mode?** — adaptive / light theme / dark theme
-3. **Which theme?** (if fixed mode) — pick from 7 presets
+| Light | | |
+|--------|----------|--------|
+| 🍃 Everforest Light | 🌹 Rosé Pine Dawn | GitHub |
+
+| Dark | | | |
+|--------|--------|------|------|
+| 🌲 Everforest Dark | 🟣 Dracula | ☕ Gruvbox | 🧊 Nord |
 
 ## How It Works
 
 ```
-Markdown content → HTML template / adaptive design → headless browser screenshot → PNG
+Markdown content → HTML layout → headless browser screenshot → PNG (750px × auto height)
 ```
-
-- **Fixed mode**: Agent replaces the `[CONTENT]` placeholder in a chosen template with Markdown-to-HTML content
-- **Adaptive mode**: Agent reads content, picks a visual direction, writes a complete self-contained HTML page. Color choice is free (Catppuccin palette available as reference)
-- **Renderer**: `puppeteer-core` opens your system Edge/Chrome headless, screenshots the `#card-wrapper` element at 750px width. Height is always auto.
 
 ## Project Structure
 
 ```
-├── SKILL.md                  # Skill definition + agent instructions
+├── SKILL.md              # Skill definition + agent behavior instructions
 ├── scripts/
-│   ├── render.js             # HTML → PNG renderer
-│   └── package.json          # puppeteer-core only
-├── templates/                # 7 preset templates
-│   ├── everforest-light.html
-│   ├── rosepine.html
-│   ├── minimal.html
-│   ├── everforest.html
-│   ├── dracula.html
-│   ├── gruvbox.html
-│   └── nord.html
-└── references/
-    ├── catppuccin.md         # Catppuccin 4-flavor color palette
-    └── html-design-guide.md  # Frontend design guidance
+│   └── render.js         # HTML → PNG renderer
+├── templates/            # 7 preset templates (inline CSS)
+└── references/           # Design references (Catppuccin palette + frontend guide)
 ```
-
-## Cross-Platform
-
-| Platform | Primary Browser |
-|----------|----------------|
-| Windows | Edge |
-| macOS | Chrome |
-| Linux | Chromium / Chrome |
 
 ## Requirements
 
-- Node.js ≥ 18
-- A Chromium-based browser (Edge / Chrome / Chromium)
+| Dependency | Notes |
+|------|------|
+| Node.js ≥ 18 | For the renderer script |
+| Edge / Chrome / Chromium | Already on your system — auto-detected |
+
+## Cross-Platform
+
+Windows → Edge. macOS → Chrome. Linux → Chromium. No configuration needed.
+
+## FAQ
+
+**Why no bundled Chromium?** To stay lean. puppeteer-core + system browser ≈ 10 MB. puppeteer with Chromium ≈ 350 MB.
+
+**Mobile-friendly?** Fixed 750px width, optimized for portrait orientation. 100px top padding avoids notch / dynamic island clipping.
+
+**Clipboard support?** `render.js --clipboard` (requires optional `npm i clipboard-sys`).
 
 ## License
 
