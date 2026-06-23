@@ -1,3 +1,6 @@
+<h1 align="center">Share Card</h1>
+<p align="center">One-click shareable card generation from Claude Code conversations</p>
+
 <p align="center">
   <a href="README.md">简体中文</a>
   &nbsp;·&nbsp;
@@ -8,11 +11,6 @@
   <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-blue?style=flat-square" alt="License"/></a>
   <a href="#"><img src="https://img.shields.io/badge/platform-Windows%20%7C%20macOS%20%7C%20Linux-brightgreen?style=flat-square" alt="Platform"/></a>
 </p>
-
-<br/>
-
-<h1 align="center">Share Card</h1>
-<p align="center">One-click shareable card generation from Claude Code conversations</p>
 
 <br/>
 
