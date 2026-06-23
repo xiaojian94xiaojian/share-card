@@ -41,7 +41,7 @@ npm install
 帮我安装这个skill：https://github.com/xiaojian94xiaojian/share-card
 ```
 
-然后在 Claude Code 对话中说：**「分享」「生成图片」「做成卡片」**
+然后在 Claude Code 对话中说：**「分享」「生成图片」「做成卡片」**，或直接输入斜杆命令 **`/share-card`**
 
 Agent 会引导你点选内容范围和风格，一键出图。
 

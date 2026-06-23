@@ -41,7 +41,7 @@ npm install
 Install this skill for me: https://github.com/xiaojian94xiaojian/share-card
 ```
 
-Then in Claude Code, say: **"share", "export", "make a card"**
+Then in Claude Code, say: **"share", "export", "make a card"**, or use the slash command: **`/share-card`**
 
 The agent will prompt you through content selection and theme picker — point-and-click, no typing.
 
