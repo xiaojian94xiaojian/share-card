@@ -2,12 +2,11 @@
 
 > One-click shareable card generation from Claude Code conversations
 
-[![License](https://img.shields.io/badge/license-MIT-blue)](LICENSE)
-[![Platform](https://img.shields.io/badge/platform-Windows%20%7C%20macOS%20%7C%20Linux-brightgreen)]()
-
----
+[![License](https://img.shields.io/badge/license-MIT-blue)](LICENSE)   [![Platform](https://img.shields.io/badge/platform-Windows%20%7C%20macOS%20%7C%20Linux-brightgreen)]()
 
 [简体中文](README.md) | English
+
+---
 
 ## What is this
 
@@ -30,20 +29,20 @@ The agent will prompt you through content selection and theme picker — point-a
 
 ## Two Modes
 
-| Mode | Description |
-|------|-------------|
-| **Fixed Template** | 7 preset themes. Agent fills in Markdown content, renders immediately |
-| **Adaptive** | AI designs a custom HTML layout from scratch — a different style every time |
+| Mode                 | Description                                                                  |
+| -------------------- | ---------------------------------------------------------------------------- |
+| **Fixed Template**   | 7 preset themes. Agent fills in Markdown content, renders immediately       |
+| **Adaptive**         | AI designs a custom HTML layout from scratch — a different style every time |
 
 ## 7 Themes
 
-| Light | | |
-|--------|----------|--------|
+| Light             |                 |        |
+| ----------------- | --------------- | ------ |
 | 🍃 Everforest Light | 🌹 Rosé Pine Dawn | GitHub |
 
-| Dark | | | |
-|--------|--------|------|------|
-| 🌲 Everforest Dark | 🟣 Dracula | ☕ Gruvbox | 🧊 Nord |
+| Dark              |           |         |             |
+| ----------------- | --------- | ------- | ----------- |
+| 🌲 Everforest Dark | 🟣 Dracula | ☕ Gruvbox | 🧊 Nord     |
 
 ## How It Works
 
@@ -63,9 +62,9 @@ Markdown content → HTML layout → headless browser screenshot → PNG (750px 
 
 ## Requirements
 
-| Dependency | Notes |
-|------|------|
-| Node.js ≥ 18 | For the renderer script |
+| Dependency               | Notes                              |
+| ------------------------ | ---------------------------------- |
+| Node.js ≥ 18            | For the renderer script            |
 | Edge / Chrome / Chromium | Already on your system — auto-detected |
 
 ## Cross-Platform

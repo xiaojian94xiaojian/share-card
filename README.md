@@ -2,12 +2,11 @@
 
 > 将 Claude Code 对话一键生成精美分享卡片
 
-[![License](https://img.shields.io/badge/license-MIT-blue)](LICENSE)
-[![Platform](https://img.shields.io/badge/platform-Windows%20%7C%20macOS%20%7C%20Linux-brightgreen)]()
-
----
+[![License](https://img.shields.io/badge/license-MIT-blue)](LICENSE)   [![Platform](https://img.shields.io/badge/platform-Windows%20%7C%20macOS%20%7C%20Linux-brightgreen)]()
 
 简体中文 | [English](README-en.md)
+
+---
 
 ## 这是什么
 
@@ -30,22 +29,22 @@ Agent 会引导你点选内容范围和风格，一键出图。
 
 ## 两种模式
 
-| 模式 | 说明 |
-|------|------|
+| 模式               | 说明                                           |
+| ------------------ | ---------------------------------------------- |
 | **固定模板** | 7 套配色主题，Agent 填入 Markdown 内容直接渲染 |
-| **自适应** | AI 根据内容量身设计 HTML，每次风格不同 |
+| **自适应**   | AI 根据内容量身设计 HTML，每次风格不同         |
 
 ## 7 套主题
 
-| 浅色 | | |
-|--------|----------|--------|
-| 🍃 森绿亮 | 🌹 玫瑰朝霞 | 简洁白 |
+| 浅色             |                 |        |
+| ---------------- | --------------- | ------ |
+| 🍃 森绿亮        | 🌹 玫瑰朝霞     | 简洁白 |
 | Everforest Light | Rosé Pine Dawn | GitHub |
 
-| 暗色 | | | |
-|--------|--------|------|------|
-| 🌲 森绿暗 | 🟣 霓虹紫 | ☕ 暖咖 | 🧊 北极蓝灰 |
-| Everforest Dark | Dracula | Gruvbox | Nord |
+| 暗色            |           |         |             |
+| --------------- | --------- | ------- | ----------- |
+| 🌲 森绿暗       | 🟣 霓虹紫 | ☕ 暖咖 | 🧊 北极蓝灰 |
+| Everforest Dark | Dracula   | Gruvbox | Nord        |
 
 ## 工作原理
 
@@ -65,9 +64,9 @@ Markdown 内容 → HTML 排版 → headless 浏览器截图 → PNG（750px × 
 
 ## 依赖
 
-| 依赖 | 说明 |
-|------|------|
-| Node.js ≥ 18 | 运行渲染脚本 |
+| 依赖                     | 说明                       |
+| ------------------------ | -------------------------- |
+| Node.js ≥ 18            | 运行渲染脚本               |
 | Edge / Chrome / Chromium | 系统自带即可，脚本自动查找 |
 
 ## 跨平台
