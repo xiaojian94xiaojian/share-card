@@ -135,7 +135,7 @@ node ${CLAUDE_SKILL_DIR}/scripts/render.js --html <file> --preset mobile --outpu
 cd ${CLAUDE_SKILL_DIR}/scripts && npm install
 ```
 
-自动使用系统 Edge 浏览器。
+需要 Chromium 内核浏览器（Edge / Chrome / Chromium），脚本自动查找。Windows 用 Edge，Mac 用 Chrome。
 
 ## 故障排除
 

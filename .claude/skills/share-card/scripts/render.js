@@ -41,28 +41,43 @@ function parseArgs(argv) {
   return args;
 }
 
-async function findEdge() {
-  const candidates = [
-    'C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe',
-    'C:\\Program Files\\Microsoft\\Edge\\Application\\msedge.exe',
-  ];
+function findBrowser() {
+  const platform = process.platform;
+  const candidates = platform === 'win32'
+    ? [
+        'C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe',
+        'C:\\Program Files\\Microsoft\\Edge\\Application\\msedge.exe',
+        'C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe',
+      ]
+    : platform === 'darwin'
+    ? [
+        '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome',
+        '/Applications/Microsoft Edge.app/Contents/MacOS/Microsoft Edge',
+        '/Applications/Chromium.app/Contents/MacOS/Chromium',
+      ]
+    : [
+        '/usr/bin/google-chrome',
+        '/usr/bin/chromium-browser',
+        '/usr/bin/chromium',
+        '/usr/bin/microsoft-edge',
+      ];
   for (const exe of candidates) {
     try { readFileSync(exe); return exe; } catch { /* skip */ }
   }
-  throw new Error('No Chromium browser found. Install Edge or set CHROME_PATH.');
+  throw new Error('No Chromium browser found. Install Chrome or Edge, or set CHROME_PATH.');
 }
 
 async function main() {
   const args = parseArgs(process.argv.slice(2));
   const html = readFileSync(args.html, 'utf-8');
-  const edgePath = await findEdge();
+  const browserPath = findBrowser();
 
-  console.log(`Browser: ${edgePath}`);
+  console.log(`Browser: ${browserPath}`);
   console.log(`Input:   ${args.html}`);
   console.log(`Width:   ${args.width}px @${args.scale}x (height: auto)`);
 
   const browser = await puppeteer.launch({
-    executablePath: edgePath,
+    executablePath: browserPath,
     headless: 'new',
     args: ['--no-sandbox', '--disable-setuid-sandbox'],
   });
