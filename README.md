@@ -18,6 +18,8 @@
 
 **Share Card** 是一个 [Claude Code](https://claude.ai/code) 技能。在对话中说「分享」，Agent 会把当前回答排版成精美卡片，渲染为 PNG 图片，方便分享到朋友圈、Twitter、GitHub 等平台。
 
+> 同样适用于 Codex、Hermes、龙虾等基于 Claude Code 的 Agent 产品。
+
 ## 快速开始
 
 #### 1. 全局安装（推荐，所有项目可用）

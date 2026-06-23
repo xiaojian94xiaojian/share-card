@@ -18,6 +18,8 @@
 
 **Share Card** is a [Claude Code](https://claude.ai/code) skill. Say "share" in a conversation and the agent will typeset the response into a polished card, then render it as a PNG — ready for Twitter, LinkedIn, GitHub, or anywhere you share images.
 
+> Also compatible with Codex, Hermes, Lobster, and other Claude Code-based agent products.
+
 ## Quick Start
 
 #### 1. Global install (recommended — available in all projects)
