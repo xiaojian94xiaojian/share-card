@@ -73,9 +73,9 @@ argument-hint: "[内容] [fixed|adaptive]"
 1. 读取 `${CLAUDE_SKILL_DIR}/templates/<name>.html`
 2. 替换占位符 `[SLOT_NAME]` 为实际内容（代码需 HTML 转义）
 3. 用 Write 工具写临时 HTML 到 `$env:TEMP\share-card.html`（确保 UTF-8 编码，不要用 PowerShell Set-Content）
-4. 运行 `node ${CLAUDE_SKILL_DIR}/scripts/render.js --html $env:TEMP\share-card.html --preset mobile --output ./share-card.png`
+4. 运行 `node ${CLAUDE_SKILL_DIR}/scripts/render.js --html $env:TEMP\share-card.html --preset mobile --output ./share-风格名.png`
 5. 删除临时 HTML 文件
-6. 报告结果
+6. 报告结果（文件名格式：`share-风格名.png`，如 `share-dracula.png`、`share-rosepine.png`）
 
 ### 各模板占位符
 
