@@ -112,6 +112,8 @@ argument-hint: "[内容] [fixed|adaptive]"
 
 ### 自适应 HTML 设计约束
 
+同一内容多次自适应时，每次必须换不同风格（配色、布局、字体至少一项有明显差异）。
+
 **写 HTML 前必读 `${CLAUDE_SKILL_DIR}/references/html-design-guide.md`。** 关键要点：
 
 - 避免 AI 味设计：不要奶油底+衬线大标题+赤陶点缀、不要纯黑底+荧光绿/朱红单色、不要报纸栏布局
