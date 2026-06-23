@@ -16,9 +16,7 @@
 
 ## What is this
 
-**Share Card** is a [Claude Code](https://claude.ai/code) skill. Say "share" in a conversation and the agent will typeset the response into a polished card, then render it as a PNG — ready for Twitter, LinkedIn, GitHub, or anywhere you share images.
-
-> Also compatible with Codex, Hermes, Lobster, and other Claude Code-based agent products.
+**Share Card** is a [Claude Code](https://claude.ai/code) skill (also compatible with Codex, Hermes, OpenClaw, and other Claude Code-based agent products). Say "share" in a conversation and the agent will typeset the response into a polished card, then render it as a PNG — ready for Twitter, LinkedIn, GitHub, or anywhere you share images.
 
 ## Quick Start
 
@@ -58,14 +56,14 @@ The agent will prompt you through content selection and theme picker — point-a
 
 ### Light
 
-| Everforest Light | Rosé Pine Dawn | GitHub |
-|------------------|----------------|--------|
+| Everforest Light                                                                       | Rosé Pine Dawn                                                   | GitHub                                                     |
+| -------------------------------------------------------------------------------------- | ---------------------------------------------------------------- | ---------------------------------------------------------- |
 | [![Everforest Light](assets/share-everforest-light.png)](assets/share-everforest-light.png) | [![Rosé Pine](assets/share-rosepine.png)](assets/share-rosepine.png) | [![GitHub](assets/share-minimal.png)](assets/share-minimal.png) |
 
 ### Dark
 
-| Everforest Dark | Dracula | Gruvbox | Nord |
-|-----------------|---------|---------|------|
+| Everforest Dark                                                              | Dracula                                                    | Gruvbox                                                    | Nord                                               |
+| ------------------------------------------------------------------------- | ----------------------------------------------------------- | ----------------------------------------------------------- | -------------------------------------------------- |
 | [![Everforest Dark](assets/share-everforest.png)](assets/share-everforest.png) | [![Dracula](assets/share-dracula.png)](assets/share-dracula.png) | [![Gruvbox](assets/share-gruvbox.png)](assets/share-gruvbox.png) | [![Nord](assets/share-nord.png)](assets/share-nord.png) |
 
 ## How It Works

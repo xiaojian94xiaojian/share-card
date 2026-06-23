@@ -16,9 +16,8 @@
 
 ## 这是什么
 
-**Share Card** 是一个 [Claude Code](https://claude.ai/code) 技能。在对话中说「分享」，Agent 会把当前回答排版成精美卡片，渲染为 PNG 图片，方便分享到朋友圈、Twitter、GitHub 等平台。
+**Share Card** 是一个 [Claude Code](https://claude.ai/code) 技能(同样适用于 Codex、Hermes、OpenClaw等 Agent 产品)。在对话中说「分享」，Agent 会把当前回答排版成精美卡片，渲染为 PNG 图片，方便分享到朋友圈、Twitter、GitHub 等平台。
 
-> 同样适用于 Codex、Hermes、龙虾等基于 Claude Code 的 Agent 产品。
 
 ## 快速开始
 
@@ -58,14 +57,14 @@ Agent 会引导你点选内容范围和风格，一键出图。
 
 ### 浅色
 
-| 森绿亮 | 玫瑰朝霞 | 简洁白 |
-|--------|----------|--------|
+| 森绿亮                                                                                 | 玫瑰朝霞                                                         | 简洁白                                                     |
+| -------------------------------------------------------------------------------------- | ---------------------------------------------------------------- | ---------------------------------------------------------- |
 | [![Everforest Light](assets/share-everforest-light.png)](assets/share-everforest-light.png) | [![Rosé Pine](assets/share-rosepine.png)](assets/share-rosepine.png) | [![GitHub](assets/share-minimal.png)](assets/share-minimal.png) |
 
 ### 暗色
 
-| 森绿暗 | 霓虹紫 | 暖咖 | 北极蓝灰 |
-|--------|--------|------|----------|
+| 森绿暗                                                                    | 霓虹紫                                                      | 暖咖                                                        | 北极蓝灰                                           |
+| ------------------------------------------------------------------------- | ----------------------------------------------------------- | ----------------------------------------------------------- | -------------------------------------------------- |
 | [![Everforest Dark](assets/share-everforest.png)](assets/share-everforest.png) | [![Dracula](assets/share-dracula.png)](assets/share-dracula.png) | [![Gruvbox](assets/share-gruvbox.png)](assets/share-gruvbox.png) | [![Nord](assets/share-nord.png)](assets/share-nord.png) |
 
 ## 工作原理
