@@ -122,7 +122,7 @@ argument-hint: "[内容] [fixed|adaptive]"
 - 内容元素 `position: relative` + `z-index: 1`
 - 字体栈：`'Segoe UI', -apple-system, BlinkMacSystemFont, 'Microsoft YaHei', sans-serif`
 - 代码字体：`'Cascadia Code', 'Fira Code', 'Consolas', monospace`
-- 文字至少 16px，四周留白至少 40px
+- 文字至少 18px，`#card-wrapper` 上下留白至少 100px（与固定模板一致），避免内容被手机前置摄像头/灵动岛遮挡
 - 可用 `${CLAUDE_SKILL_DIR}/references/catppuccin.md` 里的 4 套色板，也可以自己搭色——不做限制
 
 ---
