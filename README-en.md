@@ -1,12 +1,20 @@
-# Share Card
+<p align="center">
+  <a href="README.md">简体中文</a>
+  &nbsp;·&nbsp;
+  <strong>English</strong>
+</p>
 
-> One-click shareable card generation from Claude Code conversations
+<p align="center">
+  <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-blue?style=flat-square" alt="License"/></a>
+  <a href="#"><img src="https://img.shields.io/badge/platform-Windows%20%7C%20macOS%20%7C%20Linux-brightgreen?style=flat-square" alt="Platform"/></a>
+</p>
 
-[![License](https://img.shields.io/badge/license-MIT-blue)](LICENSE)   [![Platform](https://img.shields.io/badge/platform-Windows%20%7C%20macOS%20%7C%20Linux-brightgreen)]()
+<br/>
 
-[简体中文](README.md) | English
+<h1 align="center">Share Card</h1>
+<p align="center">One-click shareable card generation from Claude Code conversations</p>
 
----
+<br/>
 
 ## What is this
 
@@ -36,13 +44,13 @@ The agent will prompt you through content selection and theme picker — point-a
 
 ## 7 Themes
 
-| Light             |                 |        |
-| ----------------- | --------------- | ------ |
+| Light              |                  |        |
+| ------------------ | ---------------- | ------ |
 | 🍃 Everforest Light | 🌹 Rosé Pine Dawn | GitHub |
 
-| Dark              |           |         |             |
-| ----------------- | --------- | ------- | ----------- |
-| 🌲 Everforest Dark | 🟣 Dracula | ☕ Gruvbox | 🧊 Nord     |
+| Dark               |           |          |              |
+| ------------------ | --------- | -------- | ------------ |
+| 🌲 Everforest Dark  | 🟣 Dracula | ☕ Gruvbox | 🧊 Nord      |
 
 ## How It Works
 
@@ -79,6 +87,10 @@ Windows → Edge. macOS → Chrome. Linux → Chromium. No configuration needed.
 
 **Clipboard support?** `render.js --clipboard` (requires optional `npm i clipboard-sys`).
 
-## License
+<br/>
 
-MIT
+---
+
+<p align="center">
+  <sub>MIT — see <a href="LICENSE">LICENSE</a></sub>
+</p>

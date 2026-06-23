@@ -1,12 +1,20 @@
-# Share Card
+<p align="center">
+  <strong>简体中文</strong>
+  &nbsp;·&nbsp;
+  <a href="README-en.md">English</a>
+</p>
 
-> 将 Claude Code 对话一键生成精美分享卡片
+<p align="center">
+  <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-blue?style=flat-square" alt="License"/></a>
+  <a href="#"><img src="https://img.shields.io/badge/platform-Windows%20%7C%20macOS%20%7C%20Linux-brightgreen?style=flat-square" alt="Platform"/></a>
+</p>
 
-[![License](https://img.shields.io/badge/license-MIT-blue)](LICENSE)   [![Platform](https://img.shields.io/badge/platform-Windows%20%7C%20macOS%20%7C%20Linux-brightgreen)]()
+<br/>
 
-简体中文 | [English](README-en.md)
+<h1 align="center">Share Card</h1>
+<p align="center">将 Claude Code 对话一键生成精美分享卡片</p>
 
----
+<br/>
 
 ## 这是什么
 
@@ -81,6 +89,10 @@ Windows 用 Edge，macOS 用 Chrome，Linux 用 Chromium——开箱即用。
 
 **可以复制到剪贴板吗？** `render.js --clipboard`（需额外 `npm i clipboard-sys`）。
 
-## License
+<br/>
 
-MIT
+---
+
+<p align="center">
+  <sub>MIT —— 见 <a href="LICENSE">LICENSE</a></sub>
+</p>
