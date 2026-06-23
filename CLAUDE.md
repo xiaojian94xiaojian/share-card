@@ -42,4 +42,4 @@ Templates use `[SLOT_NAME]` markers. The Agent reads the template, replaces slot
 
 ## Installing the skill
 
-Copy `.claude/skills/share-card/` into the target project's `.claude/skills/` directory, then run `npm install` inside `scripts/`.
+Clone this repo into the target project's `.claude/skills/share-card/` directory, then run `npm install` inside `scripts/`.

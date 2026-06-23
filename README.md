@@ -20,11 +20,11 @@ Claude Code 技能——把对话内容一键生成精美分享卡片。
 
 ## 安装
 
-将 `skill` 目录复制到目标项目的 `.claude/skills/` 下：
+将仓库克隆到目标项目的 `.claude/skills/` 下：
 
 ```bash
 # 在目标项目根目录
-cp -r share-card/.claude/skills/share-card .claude/skills/share-card
+git clone <repo-url> .claude/skills/share-card
 
 # 安装渲染依赖（仅 puppeteer-core，不含 Chromium）
 cd .claude/skills/share-card/scripts
@@ -59,7 +59,6 @@ Markdown 内容 → HTML 模板/自适应设计 → puppeteer-core 渲染 → PN
 ## 项目结构
 
 ```
-.claude/skills/share-card/
 ├── SKILL.md              # 技能定义 + Agent 指令
 ├── scripts/
 │   ├── render.js         # HTML → PNG 渲染器

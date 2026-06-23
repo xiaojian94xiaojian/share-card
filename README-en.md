@@ -23,8 +23,8 @@ Plus an **adaptive mode** where the AI designs a custom HTML layout tailored to 
 Copy the skill into your target project:
 
 ```bash
-# From the share-card repo to your project root
-cp -r share-card/.claude/skills/share-card .claude/skills/share-card
+# Clone into your project's skills directory
+git clone <repo-url> .claude/skills/share-card
 
 # Install the single rendering dependency (no bundled Chromium)
 cd .claude/skills/share-card/scripts
@@ -59,7 +59,6 @@ Markdown content → HTML template / adaptive design → headless browser screen
 ## Project Structure
 
 ```
-.claude/skills/share-card/
 ├── SKILL.md                  # Skill definition + agent instructions
 ├── scripts/
 │   ├── render.js             # HTML → PNG renderer
