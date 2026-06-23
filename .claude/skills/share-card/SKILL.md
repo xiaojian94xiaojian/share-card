@@ -36,13 +36,13 @@ argument-hint: "[内容] [fixed|adaptive]"
 | 选项 | 标签 | 说明 |
 |------|------|------|
 | A | 自适应 | AI 量身定制 |
-| B | 简洁白 | 短文教程（GitHub） |
-| C | 北极蓝灰 | 技术长文（Nord） |
-| D | 暖咖 | 人文医学（Gruvbox） |
-| E | 霓虹紫 | 创意设计（Dracula） |
-| F | 森绿暗 | 通用技术（Everforest Dark） |
-| G | 森绿亮 | 通用技术（Everforest Light） |
-| H | 玫瑰朝霞 | 生活美学（Rosé Pine） |
+| B | 森绿亮 | Everforest Light 浅色 |
+| C | 森绿暗 | Everforest Dark 暗色 |
+| D | 玫瑰朝霞 | Rosé Pine 浅色 |
+| E | 霓虹紫 | Dracula 暗色 |
+| F | 暖咖 | Gruvbox 暗色 |
+| G | 北极蓝灰 | Nord 暗色 |
+| H | 简洁白 | GitHub 浅色 |
 
 **两项都确认后才开始生成。宽度固定 mobile 750px。**
 
