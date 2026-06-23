@@ -54,15 +54,17 @@ Agent 会引导你点选内容范围和风格，一键出图。
 
 ## 7 套主题
 
-| 浅色             |                 |        |
-| ---------------- | --------------- | ------ |
-| 🍃 森绿亮        | 🌹 玫瑰朝霞     | 简洁白 |
-| Everforest Light | Rosé Pine Dawn | GitHub |
+### 浅色
 
-| 暗色            |           |         |             |
-| --------------- | --------- | ------- | ----------- |
-| 🌲 森绿暗       | 🟣 霓虹紫 | ☕ 暖咖 | 🧊 北极蓝灰 |
-| Everforest Dark | Dracula   | Gruvbox | Nord        |
+| 森绿亮 | 玫瑰朝霞 | 简洁白 |
+|--------|----------|--------|
+| [![Everforest Light](assets/share-everforest-light.png)](assets/share-everforest-light.png) | [![Rosé Pine](assets/share-rosepine.png)](assets/share-rosepine.png) | [![GitHub](assets/share-minimal.png)](assets/share-minimal.png) |
+
+### 暗色
+
+| 森绿暗 | 霓虹紫 | 暖咖 | 北极蓝灰 |
+|--------|--------|------|----------|
+| [![Everforest Dark](assets/share-everforest.png)](assets/share-everforest.png) | [![Dracula](assets/share-dracula.png)](assets/share-dracula.png) | [![Gruvbox](assets/share-gruvbox.png)](assets/share-gruvbox.png) | [![Nord](assets/share-nord.png)](assets/share-nord.png) |
 
 ## 工作原理
 

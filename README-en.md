@@ -54,13 +54,17 @@ The agent will prompt you through content selection and theme picker — point-a
 
 ## 7 Themes
 
-| Light              |                  |        |
-| ------------------ | ---------------- | ------ |
-| 🍃 Everforest Light | 🌹 Rosé Pine Dawn | GitHub |
+### Light
 
-| Dark               |           |          |              |
-| ------------------ | --------- | -------- | ------------ |
-| 🌲 Everforest Dark  | 🟣 Dracula | ☕ Gruvbox | 🧊 Nord      |
+| Everforest Light | Rosé Pine Dawn | GitHub |
+|------------------|----------------|--------|
+| [![Everforest Light](assets/share-everforest-light.png)](assets/share-everforest-light.png) | [![Rosé Pine](assets/share-rosepine.png)](assets/share-rosepine.png) | [![GitHub](assets/share-minimal.png)](assets/share-minimal.png) |
+
+### Dark
+
+| Everforest Dark | Dracula | Gruvbox | Nord |
+|-----------------|---------|---------|------|
+| [![Everforest Dark](assets/share-everforest.png)](assets/share-everforest.png) | [![Dracula](assets/share-dracula.png)](assets/share-dracula.png) | [![Gruvbox](assets/share-gruvbox.png)](assets/share-gruvbox.png) | [![Nord](assets/share-nord.png)](assets/share-nord.png) |
 
 ## How It Works
 
